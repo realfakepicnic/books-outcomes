@@ -1,0 +1,15 @@
+{
+  "name": "books-outcomes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "frog dev"
+  },
+  "dependencies": {
+    "frog": "latest",
+    "hono": "^4"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  }
+}
