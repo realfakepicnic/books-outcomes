@@ -185,7 +185,7 @@ app.frame('/readers-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-         We welcome everyone, but we exist for people who love to read—people who feel a wrongness when they've gone too long without a book
+         We welcome everyone, but we exist for people who love reading, and who feel a wrongness when they've gone too long without a book 
         </div>
       </div>
     ),
