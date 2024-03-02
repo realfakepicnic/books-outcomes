@@ -10,6 +10,7 @@
     "hono": "^4"
   },
   "devDependencies": {
-    "typescript": "latest"
+    "typescript": "latest",
+    "vercel": "^33.5.3"
   }
 }
