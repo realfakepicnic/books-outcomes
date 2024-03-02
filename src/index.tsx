@@ -1,4 +1,5 @@
 import { Button, Frog } from 'frog'
+import { handle } from 'frog/vercel'
 
 export const app = new Frog({
   // Supply a Hub API URL to enable frame verification.
@@ -698,3 +699,6 @@ app.frame('/you', (c) => {
     ],
   })
 })
+
+export const GET = handle(app)
+export const POST = handle(app)
