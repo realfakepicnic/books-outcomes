@@ -1,4 +1,4 @@
-import { Button, Frog, TextInput } from 'frog'
+import { Button, Frog } from 'frog'
 
 export const app = new Frog({
   // Supply a Hub API URL to enable frame verification.
