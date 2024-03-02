@@ -2,7 +2,6 @@ import { Button, Frog } from 'frog'
 import { handle } from 'frog/vercel'
 
 export const app = new Frog({
-  basePath: '/api',
   // Supply a Hub API URL to enable frame verification.
   // hubApiUrl: 'https://api.hub.wevm.dev',
 })
