@@ -1,4 +1,4 @@
-import { Button, Frog } from 'frog'
+import { Button, Frog, TextInput } from 'frog'
 import { handle } from 'frog/vercel'
 
 export const app = new Frog({
