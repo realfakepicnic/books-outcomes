@@ -374,7 +374,7 @@ app.frame('/friends-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          Our conversations attract the most bookish people on Farcaster. We meet new, interesting people and connect with old friends through the books we love.
+          Our conversations attract the readers of Farcaster. We meet new, interesting people and connect with old friends through the books we love.
         </div>
       </div>
     ),
