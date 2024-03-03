@@ -81,61 +81,13 @@ app.frame('/', (c) => {
   })
 })
 
-// Why
+// Start
 
-app.frame('/why', (c) => {
+app.frame('/start', (c) => {
   const { buttonValue, inputText, status } = c
   const outcome = inputText || buttonValue
   return c.res({
-    image: (
-      <div
-        style={{
-          alignItems: 'center',
-          background:
-            status === 'response'
-              ? 'linear-gradient(to right, #432889, #17101F)'
-              : 'black',
-          backgroundSize: '100% 100%',
-          display: 'flex',
-          flexDirection: 'column',
-          flexWrap: 'nowrap',
-          height: '100%',
-          justifyContent: 'center',
-          textAlign: 'center',
-          width: '100%',
-        }}
-      >
-        <div
-          style={{
-            color: 'white',
-            fontSize: 60,
-            fontStyle: 'normal',
-            letterSpacing: '-0.025em',
-            lineHeight: 1.4,
-            marginTop: 30,
-            padding: '0 120px',
-            whiteSpace: 'pre-wrap',
-          }}
-        >
-          📚 Readers First
-        </div>
-        
-        <div
-          style={{
-            color: 'white',
-            fontSize: 40,
-            fontStyle: 'normal',
-            letterSpacing: '-0.025em',
-            lineHeight: 1.4,
-            marginTop: 30,
-            padding: '0 120px',
-            whiteSpace: 'pre-wrap',
-          }}
-        >
-          The /books channel is for people who genuinely love to read, and we all participate in making it what we want it to be
-        </div>
-      </div>
-    ),
+    image: 'images/asleep-in-the-library.jpeg',
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/" value="home">←</Button>,
