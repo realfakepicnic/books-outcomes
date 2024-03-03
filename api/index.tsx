@@ -56,17 +56,90 @@ app.frame('/', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-         Let's imagine some possible futures we can create together
+         "What brings a fresh future into being is citizens who are willing to self-organize."
+        </div>
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+        —Peter Block, Community
         </div>
       </div>
     ),
     intents: [
-      <Button action="/readers" value="readers">Readers</Button>,
-      <Button action="/friends" value="friends">Friends</Button>,
-      <Button action="/wowow" value="wowow">Wowow</Button>,
-      <Button action="/you" value="you">You</Button>,
+      <Button action="/start" value="start">Start</Button>,
+    ],
+  })
+})
+
+// Why
+
+app.frame('/why', (c) => {
+  const { buttonValue, inputText, status } = c
+  const outcome = inputText || buttonValue
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background:
+            status === 'response'
+              ? 'linear-gradient(to right, #432889, #17101F)'
+              : 'black',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        <div
+          style={{
+            color: 'white',
+            fontSize: 60,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          📚 Readers First
+        </div>
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          The /books channel is for people who genuinely love to read, and we all participate in making it what we want it to be
+        </div>
+      </div>
+    ),
+    intents: [
       <Button action="/" value="home">🏡</Button>,
-      status === 'response' && <Button.Reset>Reset</Button.Reset>,
+      <Button action="/" value="home">←</Button>,
+      <Button action="/readers-1" value="readers-1">→</Button>,
     ],
   })
 })
