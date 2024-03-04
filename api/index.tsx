@@ -87,7 +87,7 @@ app.frame('/start', (c) => {
   const { buttonValue, inputText, status } = c
   const outcome = inputText || buttonValue
   return c.res({
-    image: 'https://i.imgur.com/abVKoEu.png?1',
+    image: 'https://raw.githubusercontent.com/realfakepicnic/books-outcomes/main/images/books-alone.jpg',
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/" value="home">←</Button>,
@@ -103,7 +103,7 @@ app.frame('/start-1', (c) => {
   const { buttonValue, inputText, status } = c
   const outcome = inputText || buttonValue
   return c.res({
-    image: 'https://i.imgur.com/2DSn3So.jpeg?1',
+    image: 'https://raw.githubusercontent.com/realfakepicnic/books-outcomes/main/images/books-together-2.jpg',
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/start" value="start">←</Button>,
