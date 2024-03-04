@@ -642,7 +642,7 @@ app.frame('/friends-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          We want our conversations to attract the readers of Farcaster, and we want them to spend more time here. 
+          We want our conversations to attract the readers of Farcaster, and we want them to become regulars.
         </div>
         
         <div
@@ -657,7 +657,7 @@ app.frame('/friends-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          We want to recognize each other's faces, rather than see a channel full of people we don't know who aren't interested in being a part of this community.
+          We want to recognize each other's faces, rather than see a channel full of people we don't know who aren't interested in being a part of this.
         </div>
         
       </div>
@@ -708,7 +708,7 @@ app.frame('/friends-2', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          We welcome newcomers, and we encourage all bookish people to show up regularly and share what they're loving and learning with us. 
+          We welcome newcomers, and we encourage all bookish people to show up and share what they're loving & learning with us. 
         </div>
         
         <div
@@ -723,7 +723,7 @@ app.frame('/friends-2', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          That's how we make friends with our fellow Farcaster readers—by showing up over and over and sharing about the books we love.
+          That's how we make friends with Farcaster readers—by becoming regulars & sharing about the books we love.
         </div>
       </div>
     ),
@@ -911,6 +911,87 @@ app.frame('/wowow-2', (c) => {
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/wowow-1" value="wowow-1">←</Button>,
+      <Button action="/wowow-3" value="wowow-3">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
+    ],
+  })
+})
+
+// Wowow: 3
+
+app.frame('/wowow-3', (c) => {
+  const { buttonValue, inputText, status } = c
+  const outcome = inputText || buttonValue
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background:
+            status === 'response'
+              ? 'linear-gradient(to right, #432889, #17101F)'
+              : 'black',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          📚 Readers First: We love to read
+        </div>
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          🤓 Bookish Friends: We hang out often
+        </div>
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          ✨ Book Magic: We're always innovating
+        </div>
+        
+      </div>
+    ),
+    intents: [
+      <Button action="/" value="home">🏡</Button>,
+      <Button action="/wowow-2" value="wowow-2">←</Button>,
       <Button action="/you" value="you">→</Button>,
       <Button action="/choose" value="choose">Choose</Button>,
     ],
@@ -974,9 +1055,59 @@ app.frame('/you', (c) => {
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
-      <Button action="/wowow-2" value="wowow-2">←</Button>,
-      <Button action="/choose" value="choose">→</Button>,
-      <Button action="/" value="home">Done</Button>,
+      <Button action="/wowow-3" value="wowow-3">←</Button>,
+      <Button action="/thanks" value="thanks">→</Button>,
+      <Button action="/thanks" value="thanks">Done</Button>,
+    ],
+  })
+})
+
+// Thank you
+
+app.frame('/thanks', (c) => {
+  const { buttonValue, inputText, status } = c
+  const outcome = inputText || buttonValue
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background:
+            status === 'response'
+              ? 'linear-gradient(to right, #432889, #17101F)'
+              : 'black',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        <div
+          style={{
+            color: 'white',
+            fontSize: 60,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          🤩 Thanks for being a part of the future of /books!
+        </div>
+        
+      </div>
+    ),
+    intents: [
+      <Button action="/" value="home">🏡</Button>,
+      <Button action="/you" value="you">←</Button>,
+      <Button action="/thanks" value="thanks">→</Button>,
+      <Button action="/thanks" value="thanks">Done</Button>,
     ],
   })
 })
