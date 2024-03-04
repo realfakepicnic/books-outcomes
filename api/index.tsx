@@ -403,7 +403,7 @@ app.frame('/readers', (c) => {
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
-      <Button action="/" value="home">←</Button>,
+      <Button action="/choose" value="choose">←</Button>,
       <Button action="/readers-1" value="readers-1">→</Button>,
       <Button action="/choose" value="choose">Choose</Button>,
     ],
@@ -598,7 +598,7 @@ app.frame('/friends', (c) => {
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
-      <Button action="/" value="home">←</Button>,
+      <Button action="/choose" value="choose">←</Button>,
       <Button action="/friends-1" value="friends-1">→</Button>,
       <Button action="/choose" value="choose">Choose</Button>,
     ],
@@ -793,7 +793,7 @@ app.frame('/wowow', (c) => {
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
-      <Button action="/" value="home">←</Button>,
+      <Button action="/choose" value="choose">←</Button>,
       <Button action="/wowow-1" value="wowow-1">→</Button>,
       <Button action="/choose" value="choose">Choose</Button>,
     ],
