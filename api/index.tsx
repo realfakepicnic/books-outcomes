@@ -87,11 +87,261 @@ app.frame('/start', (c) => {
   const { buttonValue, inputText, status } = c
   const outcome = inputText || buttonValue
   return c.res({
-    image: 'images/asleep-in-the-library.jpeg',
+    image: 'https://i.imgur.com/abVKoEu.png?1',
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/" value="home">←</Button>,
-      <Button action="/readers-1" value="readers-1">→</Button>,
+      <Button action="/start-1" value="start-1">→</Button>,
+      <Button action="/choose" value="choose">Skip</Button>,
+    ],
+  })
+})
+
+// Start: 1
+
+app.frame('/start-1', (c) => {
+  const { buttonValue, inputText, status } = c
+  const outcome = inputText || buttonValue
+  return c.res({
+    image: 'https://i.imgur.com/2DSn3So.jpeg?1',
+    intents: [
+      <Button action="/" value="home">🏡</Button>,
+      <Button action="/start" value="start">←</Button>,
+      <Button action="/start-2" value="start-2">→</Button>,
+      <Button action="/choose" value="choose">Skip</Button>,
+    ],
+  })
+})
+
+// Start: 2
+
+app.frame('/start-2', (c) => {
+  const { buttonValue, inputText, status } = c
+  const outcome = inputText || buttonValue
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background:
+            status === 'response'
+              ? 'linear-gradient(to right, #432889, #17101F)'
+              : 'black',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+         I've been thinking a lot about the future of /books, and what it's going to take to make it a place we'd all like to spend more time in.
+        </div>
+        
+      </div>
+    ),
+    intents: [
+      <Button action="/" value="home">🏡</Button>,
+      <Button action="/start-1" value="start-1">←</Button>,
+      <Button action="/start-3" value="start-3">→</Button>,
+      <Button action="/choose" value="choose">Skip</Button>,
+    ],
+  })
+})
+
+// Start: 3
+
+app.frame('/start-3', (c) => {
+  const { buttonValue, inputText, status } = c
+  const outcome = inputText || buttonValue
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background:
+            status === 'response'
+              ? 'linear-gradient(to right, #432889, #17101F)'
+              : 'black',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+         A lot of you have chimed in with some really great ideas, and I've been thinking about what those ideas represent—a bigger picture vision for the future of this channel.
+        </div>
+        
+      </div>
+    ),
+    intents: [
+      <Button action="/" value="home">🏡</Button>,
+      <Button action="/start-2" value="start-2">←</Button>,
+      <Button action="/start-4" value="start-4">→</Button>,
+      <Button action="/choose" value="choose">Skip</Button>,
+    ],
+  })
+})
+
+// Start: 4
+
+app.frame('/start-4', (c) => {
+  const { buttonValue, inputText, status } = c
+  const outcome = inputText || buttonValue
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background:
+            status === 'response'
+              ? 'linear-gradient(to right, #432889, #17101F)'
+              : 'black',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+         I'd like to put these ideas in front of you. I want to see if you agree/disagree, or if there's anything you'd love to see that we haven't talked about yet.
+        </div>
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+         Are you ready?
+        </div>
+        
+      </div>
+    ),
+    intents: [
+      <Button action="/" value="home">🏡</Button>,
+      <Button action="/start-3" value="start-3">←</Button>,
+      <Button action="/choose" value="choose">→</Button>,
+      <Button action="/choose" value="choose">Yes</Button>,
+    ],
+  })
+})
+
+// Choose
+
+app.frame('/choose', (c) => {
+  const { buttonValue, inputText, status } = c
+  const outcome = inputText || buttonValue
+  return c.res({
+    image: (
+      <div
+        style={{
+          alignItems: 'center',
+          background:
+            status === 'response'
+              ? 'linear-gradient(to right, #432889, #17101F)'
+              : 'black',
+          backgroundSize: '100% 100%',
+          display: 'flex',
+          flexDirection: 'column',
+          flexWrap: 'nowrap',
+          height: '100%',
+          justifyContent: 'center',
+          textAlign: 'center',
+          width: '100%',
+        }}
+      >
+        <div
+          style={{
+            color: 'white',
+            fontSize: 60,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+          🔮 Gaze into the future of /books
+        </div>
+        
+        <div
+          style={{
+            color: 'white',
+            fontSize: 40,
+            fontStyle: 'normal',
+            letterSpacing: '-0.025em',
+            lineHeight: 1.4,
+            marginTop: 30,
+            padding: '0 120px',
+            whiteSpace: 'pre-wrap',
+          }}
+        >
+         Choose a possible future below 👇
+        </div>
+        
+      </div>
+    ),
+    intents: [
+      <Button action="/" value="home">🏡</Button>,
+      <Button action="/readers" value="readers">Readers</Button>,
+      <Button action="/friends" value="friends">Friends</Button>,
+      <Button action="/wowow" value="wowow">Wowow</Button>,
     ],
   })
 })
@@ -155,6 +405,7 @@ app.frame('/readers', (c) => {
       <Button action="/" value="home">🏡</Button>,
       <Button action="/" value="home">←</Button>,
       <Button action="/readers-1" value="readers-1">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
     ],
   })
 })
@@ -183,10 +434,11 @@ app.frame('/readers-1', (c) => {
           width: '100%',
         }}
       >
+        
         <div
           style={{
             color: 'white',
-            fontSize: 60,
+            fontSize: 40,
             fontStyle: 'normal',
             letterSpacing: '-0.025em',
             lineHeight: 1.4,
@@ -195,7 +447,7 @@ app.frame('/readers-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          📚 Readers First
+         That doesn't mean we're book snobs—we welcome everyone, and all our beloved books.
         </div>
         
         <div
@@ -210,7 +462,7 @@ app.frame('/readers-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-         We welcome everyone, but we exist for people who love reading, and who feel a wrongness when they've gone too long without a book 
+         But we exist for people who love reading, and who feel a wrongness when we've gone too long without a book in our hands. 
         </div>
       </div>
     ),
@@ -218,6 +470,7 @@ app.frame('/readers-1', (c) => {
       <Button action="/" value="home">🏡</Button>,
       <Button action="/readers" value="readers">←</Button>,
       <Button action="/readers-2" value="readers-2">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
     ],
   })
 })
@@ -246,10 +499,11 @@ app.frame('/readers-2', (c) => {
           width: '100%',
         }}
       >
+        
         <div
           style={{
             color: 'white',
-            fontSize: 60,
+            fontSize: 40,
             fontStyle: 'normal',
             letterSpacing: '-0.025em',
             lineHeight: 1.4,
@@ -258,7 +512,7 @@ app.frame('/readers-2', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          📚 Readers First
+         To make this possible, we share our gifts and uniqueness for the benefit of all.
         </div>
         
         <div
@@ -273,14 +527,16 @@ app.frame('/readers-2', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-         We all collaborate to make this a space where readers give and receive excellent recommendations, make friends with other readers, and connect over books and bookishness
+         We want a channel where readers give and receive excellent recommendations, make friends with other readers, and connect over books and bookishness.
         </div>
+        
       </div>
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/readers-1" value="readers-1">←</Button>,
-      <Button action="/" value="home">Choose Another</Button>,
+      <Button action="/choose" value="choose">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
     ],
   })
 })
@@ -344,6 +600,7 @@ app.frame('/friends', (c) => {
       <Button action="/" value="home">🏡</Button>,
       <Button action="/" value="home">←</Button>,
       <Button action="/friends-1" value="friends-1">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
     ],
   })
 })
@@ -372,10 +629,11 @@ app.frame('/friends-1', (c) => {
           width: '100%',
         }}
       >
+        
         <div
           style={{
             color: 'white',
-            fontSize: 60,
+            fontSize: 40,
             fontStyle: 'normal',
             letterSpacing: '-0.025em',
             lineHeight: 1.4,
@@ -384,7 +642,7 @@ app.frame('/friends-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          🤓 Bookish Friends
+          We want our conversations to attract the readers of Farcaster, and we want them to spend more time here. 
         </div>
         
         <div
@@ -399,14 +657,16 @@ app.frame('/friends-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          Our conversations attract the readers of Farcaster. We meet new, interesting people and connect with old friends through the books we love.
+          We want to recognize each other's faces, rather than see a channel full of people we don't know who aren't interested in being a part of this community.
         </div>
+        
       </div>
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/friends" value="friends">←</Button>,
       <Button action="/friends-2" value="friends-2">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
     ],
   })
 })
@@ -435,10 +695,11 @@ app.frame('/friends-2', (c) => {
           width: '100%',
         }}
       >
+        
         <div
           style={{
             color: 'white',
-            fontSize: 60,
+            fontSize: 40,
             fontStyle: 'normal',
             letterSpacing: '-0.025em',
             lineHeight: 1.4,
@@ -447,7 +708,7 @@ app.frame('/friends-2', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          🤓 Bookish Friends
+          We welcome newcomers, and we encourage all bookish people to show up regularly and share what they're loving and learning with us. 
         </div>
         
         <div
@@ -462,14 +723,15 @@ app.frame('/friends-2', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          We welcome newcomers, and we encourage all bookish people to show up regularly and share what they're loving and learning with us
+          That's how we make friends with our fellow Farcaster readers—by showing up over and over and sharing about the books we love.
         </div>
       </div>
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/friends-1" value="friends-1">←</Button>,
-      <Button action="/" value="home">Choose Another</Button>,
+      <Button action="/choose" value="choose">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
     ],
   })
 })
@@ -533,6 +795,7 @@ app.frame('/wowow', (c) => {
       <Button action="/" value="home">🏡</Button>,
       <Button action="/" value="home">←</Button>,
       <Button action="/wowow-1" value="wowow-1">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
     ],
   })
 })
@@ -561,10 +824,11 @@ app.frame('/wowow-1', (c) => {
           width: '100%',
         }}
       >
+        
         <div
           style={{
             color: 'white',
-            fontSize: 60,
+            fontSize: 40,
             fontStyle: 'normal',
             letterSpacing: '-0.025em',
             lineHeight: 1.4,
@@ -573,7 +837,7 @@ app.frame('/wowow-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          ✨ Book Magic
+          Connecting over books is hard. We read alone and at varying speeds. There are so many books—it’s rare to find someone else who’s read a book you love unless it’s popular.
         </div>
         
         <div
@@ -588,14 +852,16 @@ app.frame('/wowow-1', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          Connecting over books is hard. We read alone and at varying speeds. There are so many books that it’s rare to find someone else who’s read a book you love unless it’s popular. This is good for us.
+          This is good for us.
         </div>
+        
       </div>
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/wowow" value="wowow">←</Button>,
       <Button action="/wowow-2" value="wowow-2">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
     ],
   })
 })
@@ -624,20 +890,6 @@ app.frame('/wowow-2', (c) => {
           width: '100%',
         }}
       >
-        <div
-          style={{
-            color: 'white',
-            fontSize: 60,
-            fontStyle: 'normal',
-            letterSpacing: '-0.025em',
-            lineHeight: 1.4,
-            marginTop: 30,
-            padding: '0 120px',
-            whiteSpace: 'pre-wrap',
-          }}
-        >
-          ✨ Book Magic
-        </div>
         
         <div
           style={{
@@ -651,14 +903,16 @@ app.frame('/wowow-2', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          With the tech and community we have in crypto and on Farcaster, there's an enormous opportunity to innovate how we connect over the books we love
+          With the tech and community we have in crypto and on Farcaster, there's an enormous opportunity to innovate how we connect over the books we love.
         </div>
+        
       </div>
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
       <Button action="/wowow-1" value="wowow-1">←</Button>,
-      <Button action="/" value="home">Choose Another</Button>,
+      <Button action="/you" value="you">→</Button>,
+      <Button action="/choose" value="choose">Choose</Button>,
     ],
   })
 })
@@ -714,14 +968,15 @@ app.frame('/you', (c) => {
             whiteSpace: 'pre-wrap',
           }}
         >
-          Share your ideas in the comments, and help shape the future of the /books channel
+          Share your ideas in the comments, and help shape the future of the /books channel 🙏
         </div>
       </div>
     ),
     intents: [
       <Button action="/" value="home">🏡</Button>,
-      <Button action="/" value="home">←</Button>,
-      <Button action="/" value="home">Choose Another</Button>,
+      <Button action="/wowow-2" value="wowow-2">←</Button>,
+      <Button action="/choose" value="choose">→</Button>,
+      <Button action="/" value="home">Done</Button>,
     ],
   })
 })
